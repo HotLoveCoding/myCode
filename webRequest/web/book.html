@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--表示语言中国-中文-->
+<html lang="zh-CN">
+<head>
+    <!--网页的字符集-->
+    <meta charset="utf-8">
+    <!--指定浏览器解析网页使用的内核：使用最新的核心-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
+    指定视口：在浏览器虚拟的一个网页显示容器，它可以自动适配网页的宽度
+    网页宽度：设备的宽度
+    指定初始的缩放比：1比1
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>添加图书</title>
+
+    <!-- 1. 导入Bootstrap的css样式 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" style="max-width: 400px">
+    <h2>添加书籍</h2>
+    <form action="addbook" method="post" id="bookForm">
+        <div class="form-group">
+            <label for="name">图书名称</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="请输入书籍名称"/>
+        </div>
+        <div class="form-group">
+            <label for="name">图书作者</label>
+            <input type="text" name="author" id="author" class="form-control" placeholder="请输入作者"/>
+        </div>
+        <div class="form-group">
+            <label for="name">购买日期</label>
+            <input type="date" name="time" id="time"  class="form-control" placeholder="请输入购买日期"/>
+        </div>
+        <div class="form-group">
+            <label for="name">图书类别</label>
+            <select name="type" id="type" class="form-control">
+                <option value="0">--请选择--</option>
+                <option value="1">计算机</option>
+                <option value="2">小说</option>
+                <option value="3">杂项</option>
+            </select>
+        </div>
+        <div style="text-align: center;">
+            <input type="submit" value="增加图书" class="btn btn-success"/>
+        </div>
+    </form>
+</div>
+
+
+
+<!-- 2. 导入jQuery的js文件 (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<!-- 3. 加载 Bootstrap 的所有 JavaScript 插件。-->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
